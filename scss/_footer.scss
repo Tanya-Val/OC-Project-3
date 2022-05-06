@@ -1,0 +1,46 @@
+//Footer - all pages
+%footer-allpages {
+    //Footer design
+    background-color: $dark-grey;
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+
+    //Footer logo design
+    .footer-logo {
+        font-family: $title-font;
+        font-size: 20px;
+        text-decoration: none;
+        text-decoration: none;
+        color: white;
+        transition: 0.5s;
+            &:hover {
+                color: #e4cdff;
+            }
+    }
+
+    //Footer list design with icons
+    .footer-list {
+        padding-top: 20px;
+        i {
+            font-size: 12px;
+            padding-right: 7px;
+        }
+        li {
+            list-style: none;
+            color: inherit;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: thick;
+            transition: 0.5s;
+            &:hover {
+                color: #e4cdff;
+            }
+        }
+    }
+}

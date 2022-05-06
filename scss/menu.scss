@@ -1,0 +1,413 @@
+@import "./_reset";
+@import "./_variable";
+@import "./_mixins";
+@import "./_button";
+@import "./_keyframes";
+@import "./_footer";
+
+body {
+    font-family: $text-font;
+    line-height: 1.5;
+}
+
+header {
+    //Arrow and Logo position
+    .header-logoArrow {
+        @include center-flex(row);
+        height: 7vh;
+        padding-top: 2%;
+        justify-content: space-evenly;
+        i {
+            flex: 1;
+            font-size: 20px;
+            text-decoration: none;
+            color: $dark-grey;
+            //margin-left: -5rem;
+        }
+        img {
+            flex: 1;
+            max-width: 170px;
+        }
+    }
+}
+
+//Container Restaurant Menu
+.restaurant_page {
+    background-color: $light-grey;
+    border-radius: 50px 50px 0 0;
+    position: relative;
+    margin-top: -50px;
+    width: 100%;
+    //Restuarant Title and heart icon position
+    .restaurant_name {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 5%;
+        padding-top: 5%;
+        p {
+            flex: 3;
+            font-family: $title-font;
+            font-size: $large-font;
+        }
+
+        .heartIcon {
+            flex: 1;
+            font-size: 20px;
+            font-weight: 100;
+            @extend %hearts_icon;
+        }
+    }
+
+    .restaurant_menu {
+        @include start-flex(column);
+        padding-left: 5%;
+        position: relative;
+
+        .restaurant_menu-section {
+            width: 95%;
+            position: relative;
+
+            .restaurant_menu-section-name {
+                animation-duration: 0.65s;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+                opacity: 0;
+                animation-name: dish;
+                p {
+                    font-size: $medium-thin-font;
+                    font-weight: 200;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: relative;
+                        width: 2rem;
+                        border: 1.5px solid $tertiary-color;
+                        margin-top: 0.5%;
+                        transition: 0.5s;
+                    }
+
+                    &:hover:after {
+                        width: 5rem;
+                    }
+                }
+            }
+        }
+
+        .restaurant_menu-section-card {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0 10px 0px;
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 12px;
+            height: 65px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            transition: 0.5s;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            align-items: center;
+
+            animation-duration: 0.65s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            opacity: 0;
+            animation-name: dish;
+
+            @keyframes dish {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-100%);
+                }
+                30% {
+                    opacity: 0;
+                    transform: translateY(-90%);
+                }
+                60% {
+                    opacity: 0;
+                    transform: translateY(-80%);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            i {
+                position: absolute;
+                z-index: 3;
+                right: 0%;
+                color: white;
+                animation-duration: 0.4s;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-fill-mode: forwards;
+                opacity: 0;
+            }
+            &:hover {
+                padding-right: 12%;
+            }
+            &:hover i {
+                animation-name: transform;
+                opacity: 1;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 100%;
+                width: 100%;
+                height: 65px;
+                background: $tertiary-color;
+                transition: 0.5s;
+                z-index: 2;
+            }
+
+            &:hover::before {
+                left: 80%;
+            }
+
+            .menu_plate-name {
+                padding: 10px 0 10px 0;
+                margin-left: 15px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                grid-area: 1 / 1 / 3 / 2;
+                position: relative;
+
+                .dish-name {
+                    font-weight: 400;
+                }
+                .dish-ingridients {
+                    font-weight: 100;
+                    font-size: 15px;
+                }
+            }
+
+            .menu_plate-price {
+                position: relative;
+                grid-area: 1 / 2 / 3 / 3;
+            }
+        }
+
+        #card-1 {
+            animation-delay: 0s;
+        }
+        #card-2 {
+            animation-delay: 0.05s;
+        }
+        #card-3 {
+            animation-delay: 0.1s;
+        }
+        #card-4 {
+            animation-delay: 0.15s;
+        }
+        #card-5 {
+            animation-delay: 0.20s;
+        }
+        #card-6 {
+            animation-delay: 0.25s;
+        }
+        #card-7 {
+            animation-delay: 0.30s;
+        }
+        #card-8 {
+            animation-delay: 0.35s;
+        }
+        #card-9 {
+            animation-delay: 0.40s;
+        }
+
+        #card-10 {
+            animation-delay: 0.45s;
+        }
+        #card-11 {
+            animation-delay: 0.50s;
+        }
+        #card-12 {
+            animation-delay: 0.55s;
+        }
+
+        #card-13 {
+            animation-delay: 0.6s;
+        }
+    }
+}
+
+.menu-order_button {
+    @include center-flex(column);
+    padding-top: 30px;
+    padding-bottom: 70px;
+    animation-duration: 0.65s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-name: dish;
+    button {
+        @extend %pink-button;
+    }
+}
+
+//Background position
+.header_img {
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+footer {
+    @extend %footer-allpages;
+}
+
+
+
+//-------------------------------------
+
+//PINK button - extend
+%pink-button {
+    height: 50px;
+    width: 220px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    color: white;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    background: rgb(147, 86, 220);
+    background: linear-gradient(
+        6deg,
+        rgba(147, 86, 220, 1) 0%,
+        rgba(199, 103, 219, 1) 57%,
+        rgba(255, 121, 218, 1) 100%
+    );
+    transition: all 0.5s;
+    &:hover{
+        opacity: 0.85;
+        box-shadow: rgba(0, 0, 0,0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    }
+}
+
+//GREY button home page - extend
+%main-button_grey {
+    //Button and number - stick
+    button,
+    p {
+        display: inline-block;
+    }
+// THE PROBLEM IS HERE!!!!!!!!
+    button {
+        //Button design
+        background-color: rgb(249, 249, 249);
+        height: 70px;
+        min-width: 310px;
+        max-width: 315px;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        transition: all 0.8s;
+        //Icon
+        i {
+            position: absolute;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 30px;
+            color: grey;
+        }
+
+        //Text inside button
+        .btn_name {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 60px;
+        }
+
+        &:hover{
+            background-color: #efe1ff;
+            box-shadow: rgba(0, 0, 0,0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            i {
+                color: $primary-color;
+            }
+        }
+    }
+
+    //Button numbers and position
+    p {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        border: none;
+        border-radius: 50px;
+        background-color: $primary-color;
+        color: white;
+        padding-left: 8px;
+        padding-top: 1px;
+        margin-top: 42.5px;
+        margin-left: -10px;
+    }
+
+}
+
+%hearts_icon {
+    #contour-heart {
+        color: $dark-grey;
+    }
+
+    #full-heart {
+        visibility: collapse;
+    }
+
+    &:hover {
+        #full-heart {
+            position: absolute;
+            visibility: visible;
+            margin-top: 3px;
+            margin-left: -16px;
+            background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shake-animation 0.3s ease-in-out 0s 1;
+            animation-fill-mode: both;
+            transform-origin: 50% 50%;
+        }
+
+        #contour-heart {
+            visibility: collapse;
+        }
+    }
+}
+
+// Project colors
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+//Background colors
+$light-grey: rgb(249, 249, 249);
+$medium-grey: rgb(238, 238, 238);
+$dark-grey: rgb(52, 52, 52);
+
+// Project fonts style
+$title-font: 'Shrikhand', cursive;
+$text-font: 'Roboto', sans-serif;
+
+// Project fonts size
+$small-font: 16px;
+$medium-thin-font: 17px;
+$medium-font: 24px;
+$large-font: 28px;

@@ -1,0 +1,44 @@
+@keyframes shake-animation {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(1px);
+    }
+    50% {
+        transform: translateX(-1px);
+    }
+    75% {
+        transform: translateX(1px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+//Green price animation
+@keyframes transform {
+    100% {
+        transform: translateX(-140%) rotate(360deg);
+    }
+}
+
+/*Animation to hide the loader
+        changes the visibility to hidden 
+        by decriesing the size*/
+@keyframes loader-hide {
+    to {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+/*Animation to rotate the loader*/
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}

@@ -1,0 +1,293 @@
+@import "./_reset";
+@import "./_mixins";
+@import "./_variable";
+@import "./_button";
+@import "./_keyframes";
+@import "./_footer";
+/* {
+   outline: solid 1px red;
+}*/
+body {
+    font-family: $text-font;
+    line-height: 1.5;
+    /*Loader position*/
+    .loader {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        z-index: 4;
+        opacity: 0.9;
+        /*Animation to hide the loader class
+        with 0s durantion and 2s delay*/
+        animation: loader-hide 0s 2s;
+        animation-fill-mode: forwards;
+
+        /*Loader element*/
+        &::after {
+            content: "";
+            width: 150px;
+            height: 150px;
+            border: 15px solid #dddddd00;
+            border-radius: 50%;
+            border-top-color: $primary-color;
+            border-bottom-color: $primary-color;
+            animation: loading linear 1s infinite;
+        }
+    }
+}
+
+header {
+    //Header container & position
+    @include center-flex(column);
+
+    //Header-Logo container & position
+    .headerLogo {
+        width: 100%;
+        height: 60px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 0 4px 0px;
+        z-index: 1;
+        @include center-flex(row);
+        img {
+            width: 80%;
+            margin: 4% 0 0 11%;
+        }
+    }
+
+    //Header-Pin and Location container & position
+    .header-pin {
+        width: 100%;
+        height: 60px;
+        background-color: $medium-grey;
+        @include center-flex(row);
+        p {
+            margin-left: 20px;
+            font-size: $small-font;
+        }
+        i,
+        p {
+            display: inline-block;
+        }
+    }
+
+    //Header-Info container & position
+    .headerInfo {
+        @include center-flex(column);
+        row-gap: 35px;
+        width: 100%;
+        height: 300px;
+        //padding: 10% 0;
+        background-color: $light-grey;
+        color: $dark-grey;
+
+        //Header text
+        .headerInfo-book {
+            font-size: $medium-font;
+            font-weight: bold;
+        }
+
+        .headerInfo-discover {
+            text-align: center;
+            font-size: $medium-thin-font;
+            font-weight: 200;
+        }
+
+        //Pink button position
+        .headerInfo-btn {
+            @extend %pink-button;
+        }
+
+        //Media for desktop
+        @include desktop {
+            //Header text
+            .headerInfo-book {
+                font-size: 47px;
+            }
+            .headerInfo-discover {
+                font-size: 30px;
+            }
+
+            row-gap: 20px;
+        }
+    }
+}
+
+main {
+    //Main Container
+    .mainInstruction-text {
+        font-size: $medium-font;
+        font-weight: bold;
+        justify-content: flex-start;
+        margin-left: 20px;
+        margin-top: 40px;
+        color: $dark-grey;
+    }
+    .mainInstruction-btn {
+        @include center-flex(column);
+
+        .mainInstruction-btn_design {
+            //
+            //Button and number - stick
+            padding-left: 2%;
+            button,
+            p {
+                display: inline-block;
+                
+            }
+
+            button {
+                //Button design
+                background-color: rgb(249, 249, 249);
+                height: 70px;
+                width: 93vw;
+                padding-left: 5px;
+                //max-width: 400px;
+                border: none;
+                border-radius: 20px;
+                font-size: 16px;
+                margin-top: 20px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                transition: all 0.8s;
+                //Icon
+                i {
+                    position: absolute;
+                    display: flex;
+                    justify-content: flex-start;
+                    padding-left: 30px;
+                    color: grey;
+                }
+
+                //Text inside button
+                .btn_name {
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-start;
+                    padding-left: 60px;
+                }
+
+                &:hover {
+                    background-color: #efe1ff;
+                    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                    i {
+                        color: #9356dc;
+                    }
+                }
+            }
+
+            //Button numbers and position
+            p {
+                position: absolute;
+                height: 25px;
+                width: 25px;
+                border: none;
+                border-radius: 50px;
+                background-color: $primary-color;
+                color: white;
+                padding-left: 8px;
+                padding-top: 1px;
+                margin-top: 42.5px;
+                margin-left: -10px;
+            }
+        }
+    }
+
+    @include desktop {
+        .mainInstruction-btn {
+            @include center-flex(row);
+            column-gap: 3%;
+        }
+    }
+
+    .mainRestaurants {
+        background: $light-grey;
+        width: 100%;
+        .mainRestaurants-title {
+            margin-left: 20px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            padding-top: 40px;
+            font-size: $medium-font;
+            font-weight: bold;
+        }
+
+        .mainRestaurants_card {
+            @include center-flex(column);
+
+            .mainRestaurants_card-design {
+                margin-bottom: 20px;
+                border-radius: 15px;
+                height: 220px;
+                width: 90%;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .mainRestaurants_card-design:hover {
+                box-shadow: 0 8px 16px 0 rgba(99, 99, 99, 0.4);
+            }
+
+            .mainRestaurants_card-design a:link {
+                text-decoration: none;
+            }
+
+            .mainRestaurants_card-design a:visited {
+                text-decoration: none;
+            }
+
+            img {
+                height: 150px;
+                //solve the width!!!!!!!
+                width: 100%;
+
+                object-fit: cover;
+                position: relative;
+                border-radius: 15px 15px 0 0;
+            }
+
+            .card-label {
+                position: absolute;
+                z-index: 1;
+                padding-left: 240px;
+                padding-top: 10px;
+                button {
+                    background-color: $tertiary-color;
+                    color: darken($color: $tertiary-color, $amount: 50);
+                    border: none;
+                    width: 80px;
+                    height: 30px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                }
+            }
+
+            .mainRestaurants_card-design-txt {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                padding-left: 15px;
+                padding-top: 5px;
+
+                .heartIcon {
+                    position: absolute;
+                    padding-left: 270px;
+                    padding-top: -70px;
+                    @extend %hearts_icon;
+                }
+
+                .card-restaurant-name {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    @extend %footer-allpages;
+}
+
+//-------------------------------------

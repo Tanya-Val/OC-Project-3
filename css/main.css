@@ -1,0 +1,384 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+header .headerInfo .headerInfo-btn {
+  height: 50px;
+  width: 60%;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  color: white;
+  opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  background: #9356dc;
+  background: linear-gradient(6deg, #9356dc 0%, #c767db 57%, #ff79da 100%);
+  transition: all 0.5s; }
+  header .headerInfo .headerInfo-btn:hover {
+    opacity: 0.85;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
+
+/*/GREY button home page - extend
+%main-button_grey {
+    width: 100%;
+    //Button and number - stick
+    button,
+    p {
+        display: inline-block;
+    }
+
+    button {
+        //Button design
+        background-color: rgb(249, 249, 249);
+        height: 70px;
+        min-width: 320px;
+        max-width: 400px;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        transition: all 0.8s;
+        //Icon
+        i {
+            position: absolute;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 30px;
+            color: grey;
+        }
+
+        //Text inside button
+        .btn_name {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 60px;
+        }
+
+        &:hover{
+            background-color: #efe1ff;
+            box-shadow: rgba(0, 0, 0,0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            i {
+                color: #9356DC;
+            }
+        }
+    }
+
+    //Button numbers and position
+    p {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        border: none;
+        border-radius: 50px;
+        background-color: $primary-color;
+        color: white;
+        padding-left: 8px;
+        padding-top: 1px;
+        margin-top: 42.5px;
+        margin-left: -10px;
+    }
+
+}*/
+main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heartIcon #contour-heart {
+  color: #343434; }
+
+main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heartIcon #full-heart {
+  visibility: collapse; }
+
+main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heartIcon:hover #full-heart {
+  position: absolute;
+  visibility: visible;
+  margin-top: 3px;
+  margin-left: -16px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shake-animation 0.3s ease-in-out 0s 1;
+  animation-fill-mode: both;
+  transform-origin: 50% 50%; }
+
+main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heartIcon:hover #contour-heart {
+  visibility: collapse; }
+
+@keyframes shake-animation {
+  0% {
+    transform: translateX(0); }
+  25% {
+    transform: translateX(1px); }
+  50% {
+    transform: translateX(-1px); }
+  75% {
+    transform: translateX(1px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes transform {
+  100% {
+    transform: translateX(-140%) rotate(360deg); } }
+
+/*Animation to hide the loader
+        changes the visibility to hidden 
+        by decriesing the size*/
+@keyframes loader-hide {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0; } }
+
+/*Animation to rotate the loader*/
+@keyframes loading {
+  from {
+    transform: rotate(0turn); }
+  to {
+    transform: rotate(1turn); } }
+
+footer {
+  background-color: #343434;
+  color: white;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  text-decoration: none; }
+  footer .footer-logo {
+    font-family: "Shrikhand", cursive;
+    font-size: 20px;
+    text-decoration: none;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s; }
+    footer .footer-logo:hover {
+      color: #e4cdff; }
+  footer .footer-list {
+    padding-top: 20px; }
+    footer .footer-list i {
+      font-size: 12px;
+      padding-right: 7px; }
+    footer .footer-list li {
+      list-style: none;
+      color: inherit; }
+    footer .footer-list a {
+      color: inherit;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: thick;
+      transition: 0.5s; }
+      footer .footer-list a:hover {
+        color: #e4cdff; }
+
+/* {
+   outline: solid 1px red;
+}*/
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  /*Loader position*/ }
+  body .loader {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    z-index: 4;
+    opacity: 0.9;
+    /*Animation to hide the loader class
+        with 0s durantion and 2s delay*/
+    animation: loader-hide 0s 2s;
+    animation-fill-mode: forwards;
+    /*Loader element*/ }
+    body .loader::after {
+      content: "";
+      width: 150px;
+      height: 150px;
+      border: 15px solid #dddddd00;
+      border-radius: 50%;
+      border-top-color: #9356DC;
+      border-bottom-color: #9356DC;
+      animation: loading linear 1s infinite; }
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  header .headerLogo {
+    width: 100%;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0 4px 0px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; }
+    header .headerLogo img {
+      width: 80%;
+      margin: 4% 0 0 11%; }
+  header .header-pin {
+    width: 100%;
+    height: 60px;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; }
+    header .header-pin p {
+      margin-left: 20px;
+      font-size: 16px; }
+    header .header-pin i,
+    header .header-pin p {
+      display: inline-block; }
+  header .headerInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 35px;
+    width: 100%;
+    height: 300px;
+    background-color: #f9f9f9;
+    color: #343434; }
+    header .headerInfo .headerInfo-book {
+      font-size: 24px;
+      font-weight: bold; }
+    header .headerInfo .headerInfo-discover {
+      text-align: center;
+      font-size: 17px;
+      font-weight: 200; }
+    @media (min-width: 400px) {
+      header .headerInfo {
+        row-gap: 20px; }
+        header .headerInfo .headerInfo-book {
+          font-size: 47px; }
+        header .headerInfo .headerInfo-discover {
+          font-size: 30px; } }
+
+main .mainInstruction-text {
+  font-size: 24px;
+  font-weight: bold;
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-top: 40px;
+  color: #343434; }
+
+main .mainInstruction-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  main .mainInstruction-btn .mainInstruction-btn_design {
+    padding-left: 2%; }
+    main .mainInstruction-btn .mainInstruction-btn_design button,
+    main .mainInstruction-btn .mainInstruction-btn_design p {
+      display: inline-block; }
+    main .mainInstruction-btn .mainInstruction-btn_design button {
+      background-color: #f9f9f9;
+      height: 70px;
+      width: 93vw;
+      padding-left: 5px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      transition: all 0.8s; }
+      main .mainInstruction-btn .mainInstruction-btn_design button i {
+        position: absolute;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 30px;
+        color: grey; }
+      main .mainInstruction-btn .mainInstruction-btn_design button .btn_name {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 60px; }
+      main .mainInstruction-btn .mainInstruction-btn_design button:hover {
+        background-color: #efe1ff;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
+        main .mainInstruction-btn .mainInstruction-btn_design button:hover i {
+          color: #9356dc; }
+    main .mainInstruction-btn .mainInstruction-btn_design p {
+      position: absolute;
+      height: 25px;
+      width: 25px;
+      border: none;
+      border-radius: 50px;
+      background-color: #9356DC;
+      color: white;
+      padding-left: 8px;
+      padding-top: 1px;
+      margin-top: 42.5px;
+      margin-left: -10px; }
+
+@media (min-width: 400px) {
+  main .mainInstruction-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 3%; } }
+
+main .mainRestaurants {
+  background: #f9f9f9;
+  width: 100%; }
+  main .mainRestaurants .mainRestaurants-title {
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    font-size: 24px;
+    font-weight: bold; }
+  main .mainRestaurants .mainRestaurants_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design {
+      margin-bottom: 20px;
+      border-radius: 15px;
+      height: 220px;
+      width: 90%;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      position: relative;
+      transition: 0.5s; }
+    main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design:hover {
+      box-shadow: 0 8px 16px 0 rgba(99, 99, 99, 0.4); }
+    main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design a:link {
+      text-decoration: none; }
+    main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design a:visited {
+      text-decoration: none; }
+    main .mainRestaurants .mainRestaurants_card img {
+      height: 150px;
+      width: 100%;
+      object-fit: cover;
+      position: relative;
+      border-radius: 15px 15px 0 0; }
+    main .mainRestaurants .mainRestaurants_card .card-label {
+      position: absolute;
+      z-index: 1;
+      padding-left: 240px;
+      padding-top: 10px; }
+      main .mainRestaurants .mainRestaurants_card .card-label button {
+        background-color: #99E2D0;
+        color: #1b6150;
+        border: none;
+        width: 80px;
+        height: 30px;
+        border-radius: 5px;
+        font-weight: bold; }
+    main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding-left: 15px;
+      padding-top: 5px; }
+      main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heartIcon {
+        position: absolute;
+        padding-left: 270px;
+        padding-top: -70px; }
+      main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .card-restaurant-name {
+        font-weight: bold; }

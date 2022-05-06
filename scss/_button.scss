@@ -1,0 +1,117 @@
+//PINK button - extend
+%pink-button {
+    height: 50px;
+    width: 60%;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    color: white;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    background: rgb(147, 86, 220);
+    background: linear-gradient(
+        6deg,
+        rgba(147, 86, 220, 1) 0%,
+        rgba(199, 103, 219, 1) 57%,
+        rgba(255, 121, 218, 1) 100%
+    );
+    transition: all 0.5s;
+    &:hover{
+        opacity: 0.85;
+        box-shadow: rgba(0, 0, 0,0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    }
+}
+
+/*/GREY button home page - extend
+%main-button_grey {
+    width: 100%;
+    //Button and number - stick
+    button,
+    p {
+        display: inline-block;
+    }
+
+    button {
+        //Button design
+        background-color: rgb(249, 249, 249);
+        height: 70px;
+        min-width: 320px;
+        max-width: 400px;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        transition: all 0.8s;
+        //Icon
+        i {
+            position: absolute;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 30px;
+            color: grey;
+        }
+
+        //Text inside button
+        .btn_name {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 60px;
+        }
+
+        &:hover{
+            background-color: #efe1ff;
+            box-shadow: rgba(0, 0, 0,0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            i {
+                color: #9356DC;
+            }
+        }
+    }
+
+    //Button numbers and position
+    p {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        border: none;
+        border-radius: 50px;
+        background-color: $primary-color;
+        color: white;
+        padding-left: 8px;
+        padding-top: 1px;
+        margin-top: 42.5px;
+        margin-left: -10px;
+    }
+
+}*/
+
+%hearts_icon {
+    #contour-heart {
+        color: $dark-grey;
+    }
+
+    #full-heart {
+        visibility: collapse;
+    }
+
+    &:hover {
+        #full-heart {
+            position: absolute;
+            visibility: visible;
+            margin-top: 3px;
+            margin-left: -16px;
+            background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shake-animation 0.3s ease-in-out 0s 1;
+            animation-fill-mode: both;
+            transform-origin: 50% 50%;
+        }
+
+        #contour-heart {
+            visibility: collapse;
+        }
+    }
+}
+
