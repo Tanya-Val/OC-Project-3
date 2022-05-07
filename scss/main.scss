@@ -55,23 +55,46 @@ header {
             width: 80%;
             margin: 4% 0 0 11%;
         }
+
+        @include desktop{
+            img{
+                width: 110%;
+                margin: 4% 0 0 0;
+            }
+        }
     }
+
+
 
     //Header-Pin and Location container & position
     .header-pin {
         width: 100%;
         height: 60px;
         background-color: $medium-grey;
+        color: $dark-grey;
         @include center-flex(row);
         p {
             margin-left: 20px;
             font-size: $small-font;
+            
         }
+
+        @include desktop{
+            p {
+            font-size: $medium-font;
+            }
+        }
+
         i,
         p {
             display: inline-block;
+            background-color: $medium-grey;
         }
     }
+
+    
+
+    
 
     //Header-Info container & position
     .headerInfo {
@@ -79,7 +102,6 @@ header {
         row-gap: 35px;
         width: 100%;
         height: 300px;
-        //padding: 10% 0;
         background-color: $light-grey;
         color: $dark-grey;
 
@@ -104,13 +126,13 @@ header {
         @include desktop {
             //Header text
             .headerInfo-book {
-                font-size: 47px;
+                font-size: 40px;
             }
             .headerInfo-discover {
-                font-size: 30px;
+                font-size: 25px;
             }
 
-            row-gap: 20px;
+            row-gap: 16px;
         }
     }
 }
@@ -125,6 +147,12 @@ main {
         margin-top: 40px;
         color: $dark-grey;
     }
+    //How it works media query
+    @include desktop {
+        .mainInstruction-text {
+            margin-left: 6%;
+        }
+    }
     .mainInstruction-btn {
         @include center-flex(column);
 
@@ -135,7 +163,6 @@ main {
             button,
             p {
                 display: inline-block;
-                
             }
 
             button {
@@ -193,14 +220,21 @@ main {
             }
         }
     }
-
+    //Grey buttons media query
     @include desktop {
         .mainInstruction-btn {
             @include center-flex(row);
             column-gap: 3%;
+
+            .mainInstruction-btn_design {
+                padding-left: 0;
+
+                button {
+                    width: 27vw;
+                }
+            }
         }
     }
-
     .mainRestaurants {
         background: $light-grey;
         width: 100%;
@@ -211,11 +245,19 @@ main {
             padding-top: 40px;
             font-size: $medium-font;
             font-weight: bold;
+            color: $dark-grey;
+        }
+
+        //"Restautrants" media query
+        @include desktop {
+            .mainRestaurants-title {
+                margin-left: 6%;
+            }
         }
 
         .mainRestaurants_card {
             @include center-flex(column);
-
+    
             .mainRestaurants_card-design {
                 margin-bottom: 20px;
                 border-radius: 15px;
@@ -224,6 +266,13 @@ main {
                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                 position: relative;
                 transition: 0.5s;
+            }
+
+            @include desktop {
+                .mainRestaurants_card-design {
+                    width: 40%;
+                    height: 350px;
+                }
             }
 
             .mainRestaurants_card-design:hover {
@@ -240,19 +289,25 @@ main {
 
             img {
                 height: 150px;
-                //solve the width!!!!!!!
                 width: 100%;
-
                 object-fit: cover;
                 position: relative;
                 border-radius: 15px 15px 0 0;
+                top: 0;
+                left: 0;
+            }
+
+            @include desktop {
+                img {
+                    height: 280px;
+                }
             }
 
             .card-label {
                 position: absolute;
-                z-index: 1;
-                padding-left: 240px;
-                padding-top: 10px;
+                z-index: 3;
+                top: 5%;
+                left:70%;
                 button {
                     background-color: $tertiary-color;
                     color: darken($color: $tertiary-color, $amount: 50);
@@ -261,6 +316,7 @@ main {
                     height: 30px;
                     border-radius: 5px;
                     font-weight: bold;
+                    
                 }
             }
 
@@ -273,14 +329,32 @@ main {
 
                 .heartIcon {
                     position: absolute;
-                    padding-left: 270px;
-                    padding-top: -70px;
+                    right: 5%;
+                    top: 78%;
                     @extend %hearts_icon;
+                }
+
+                @include desktop{
+                    .heartIcon {
+                        top: 85%;
+                    }
                 }
 
                 .card-restaurant-name {
                     font-weight: bold;
                 }
+
+
+            }
+        }
+
+        @include desktop {
+            .mainRestaurants_card{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                column-gap: 3%;
+                padding: 0 4.8% 0 4.8%;
             }
         }
     }
@@ -289,5 +363,7 @@ main {
 footer {
     @extend %footer-allpages;
 }
+
+
 
 //-------------------------------------
