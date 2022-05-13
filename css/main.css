@@ -23,20 +23,22 @@ main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .he
   color: #343434; }
 
 main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heartIcon #full-heart {
-  visibility: hidden; }
+  visibility: collapse; }
 
 main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heartIcon:hover #full-heart {
-  position: relative;
+  position: absolute;
   visibility: visible;
+  margin-top: 3px;
+  margin-left: -16px;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shake-animation 0.3s ease-in-out 0s 1;
-  animation-fill-mode: backwards;
+  animation-fill-mode: both;
   transform-origin: 50% 50%; }
 
 main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heartIcon:hover #contour-heart {
-  visibility: hidden; }
+  visibility: collapse; }
 
 @keyframes shake-animation {
   0% {
@@ -69,6 +71,20 @@ main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .he
     transform: rotate(0turn); }
   to {
     transform: rotate(1turn); } }
+
+@keyframes dish {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  30% {
+    opacity: 0;
+    transform: translateY(-90%); }
+  60% {
+    opacity: 0;
+    transform: translateY(-80%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 footer {
   background-color: #343434;
@@ -357,3 +373,45 @@ main .mainRestaurants {
       flex-wrap: wrap;
       column-gap: 3%;
       padding: 0 4.8% 0 4.8%; } }
+
+@media (min-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #343434;
+    color: white;
+    padding-right: 10%;
+    padding-left: 15%;
+    padding-bottom: 5%;
+    text-decoration: none; }
+    footer .footer-logo {
+      font-family: "Shrikhand", cursive;
+      font-size: 24px;
+      text-decoration: none;
+      margin-top: 22px;
+      color: white;
+      transition: 0.5s; }
+      footer .footer-logo:hover {
+        color: #e4cdff; }
+    footer .footer-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-grow: 2; }
+      footer .footer-list i {
+        font-size: 16px;
+        padding-right: 7px; }
+      footer .footer-list li {
+        list-style: none;
+        color: inherit; }
+      footer .footer-list a {
+        color: inherit;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: thick;
+        transition: 0.5s; }
+        footer .footer-list a:hover {
+          color: #e4cdff; } }

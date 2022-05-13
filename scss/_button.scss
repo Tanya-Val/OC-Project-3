@@ -23,34 +23,32 @@
 }
 
 
-%hearts_icon {
+/*%hearts_icon {
     #contour-heart {
         color: $dark-grey;
     }
 
     #full-heart {
-        visibility: hidden;
+        visibility: collapse;
     }
 
     &:hover {
         #full-heart {
-            position: relative;
+            position: absolute;
             visibility: visible;
-            //margin-top: 3px;
-            //margin-left: -16px;
-            //top: 0;
-            //left: -17px;
+            margin-top: 3px;
+            margin-left: -16px;
             background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
             background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: shake-animation 0.3s ease-in-out 0s 1;
-            animation-fill-mode: backwards;
+            animation-fill-mode: both;
             transform-origin: 50% 50%;
         }
 
         #contour-heart {
-            visibility: hidden;
+            visibility: collapse;
         }
     }
-}
+}*/
 

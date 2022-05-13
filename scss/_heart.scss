@@ -1,0 +1,46 @@
+.heart-move{
+    border:none;
+    background-color: inherit;
+    position: relative;
+    font-size: 1.5rem;
+    height: fit-content;
+    
+    &_bottom{
+        opacity: 1;
+        transition: opacity 1s;
+    }
+
+    &:focus, &:hover, &:active {
+        & .heartMove_bottom {
+            opacity: 0;
+        }
+
+        & .heartMove_top {
+            opacity: 1;
+        }
+
+    }
+
+    &_top{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 2s;
+    }
+
+    .far {
+        display: block;
+    }
+
+    .fas {
+        display: block;
+        background: -webkit-linear-gradient(#9356dc, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+}

@@ -14,20 +14,64 @@ header {
     //Arrow and Logo position
     .header-logoArrow {
         @include center-flex(row);
+        width: 100%;
         height: 7vh;
-        padding-top: 2%;
-        justify-content: space-evenly;
+        padding-top: 3%;
+        padding-bottom: 2%;
+        //padding-left: 10%;
+        padding-right: 10%;
+        justify-content: center;
+        column-gap: 10%;
         i {
-            flex: 1;
+            flex: content;
             font-size: 20px;
             text-decoration: none;
             color: $dark-grey;
-            //margin-left: -5rem;
         }
         img {
-            flex: 1;
+            flex-grow: 3;
             max-width: 170px;
         }
+    }
+
+    @include desktop {
+        .header-logoArrow {
+            i {
+                font-size: 30px;
+            }
+            img {
+                max-width: 350px;
+            }
+        }
+    }
+}
+
+//.bst{
+//    visibility: collapse;
+//}
+
+@include desktop {
+    .bst {
+        //visibility: visible;
+        background-image: url("/image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-position: 20%;
+    }
+}
+
+//Background position
+.header_img {
+    visibility: visible;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+@include desktop {
+    .header_img {
+        visibility: collapse;
     }
 }
 
@@ -36,8 +80,9 @@ header {
     background-color: $light-grey;
     border-radius: 50px 50px 0 0;
     position: relative;
-    margin-top: -50px;
+    margin-top: -10vh;
     width: 100%;
+
     //Restuarant Title and heart icon position
     .restaurant_name {
         display: flex;
@@ -46,18 +91,65 @@ header {
         align-items: center;
         padding-left: 5%;
         padding-top: 5%;
+
         p {
             flex: 3;
             font-family: $title-font;
             font-size: $large-font;
         }
 
-        .heartIcon {
-            flex: 1;
+        //.heartIcon {
+        /*flex: 1;
             font-size: 20px;
             font-weight: 100;
-            @extend %hearts_icon;
+            @extend %hearts_icon;*/
+
+        .heart-move {
+            border: none;
+            background-color: inherit;
+            position: relative;
+            font-size: 1.5rem;
+            height: fit-content;
+
+            &_bottom {
+                opacity: 1;
+                transition: opacity 1s;
+            }
+
+            &:focus,
+            &:hover,
+            &:active {
+                & .heartMove_bottom {
+                    opacity: 0;
+                }
+
+                & .heartMove_top {
+                    opacity: 1;
+                }
+            }
+
+            &_top {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity 2s;
+            }
+
+            .far {
+                display: block;
+            }
+
+            .fas {
+                display: block;
+                background: -webkit-linear-gradient(#9356dc, #ff79da);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
+        //}
     }
 
     .restaurant_menu {
@@ -67,7 +159,6 @@ header {
 
         .restaurant_menu-section {
             width: 95%;
-            position: relative;
 
             .restaurant_menu-section-name {
                 animation-duration: 0.65s;
@@ -76,6 +167,7 @@ header {
                 animation-fill-mode: forwards;
                 opacity: 0;
                 animation-name: dish;
+
                 p {
                     font-size: $medium-thin-font;
                     font-weight: 200;
@@ -123,25 +215,6 @@ header {
             animation-fill-mode: forwards;
             opacity: 0;
             animation-name: dish;
-
-            @keyframes dish {
-                0% {
-                    opacity: 0;
-                    transform: translateY(-100%);
-                }
-                30% {
-                    opacity: 0;
-                    transform: translateY(-90%);
-                }
-                60% {
-                    opacity: 0;
-                    transform: translateY(-80%);
-                }
-                100% {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
 
             i {
                 position: absolute;
@@ -214,26 +287,26 @@ header {
             animation-delay: 0.15s;
         }
         #card-5 {
-            animation-delay: 0.20s;
+            animation-delay: 0.2s;
         }
         #card-6 {
             animation-delay: 0.25s;
         }
         #card-7 {
-            animation-delay: 0.30s;
+            animation-delay: 0.3s;
         }
         #card-8 {
             animation-delay: 0.35s;
         }
         #card-9 {
-            animation-delay: 0.40s;
+            animation-delay: 0.4s;
         }
 
         #card-10 {
             animation-delay: 0.45s;
         }
         #card-11 {
-            animation-delay: 0.50s;
+            animation-delay: 0.5s;
         }
         #card-12 {
             animation-delay: 0.55s;
@@ -242,6 +315,18 @@ header {
         #card-13 {
             animation-delay: 0.6s;
         }
+    }
+}
+
+@include desktop {
+    .restaurant_page {
+        margin-left: 10%;
+        width: 50%;
+        //margin-top: -30vh;
+        //margin-left: 7vh;
+
+        //position: absolute;
+        //z-index: 9;
     }
 }
 
@@ -260,154 +345,8 @@ header {
     }
 }
 
-//Background position
-.header_img {
-    object-fit: cover;
-    position: relative;
-    width: 100%;
-    height: 300px;
-}
-
 footer {
     @extend %footer-allpages;
 }
 
-
-
 //-------------------------------------
-
-//PINK button - extend
-%pink-button {
-    height: 50px;
-    width: 220px;
-    border: none;
-    border-radius: 50px;
-    font-size: 16px;
-    color: white;
-    opacity: 1;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    background: rgb(147, 86, 220);
-    background: linear-gradient(
-        6deg,
-        rgba(147, 86, 220, 1) 0%,
-        rgba(199, 103, 219, 1) 57%,
-        rgba(255, 121, 218, 1) 100%
-    );
-    transition: all 0.5s;
-    &:hover{
-        opacity: 0.85;
-        box-shadow: rgba(0, 0, 0,0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    }
-}
-
-//GREY button home page - extend
-%main-button_grey {
-    //Button and number - stick
-    button,
-    p {
-        display: inline-block;
-    }
-// THE PROBLEM IS HERE!!!!!!!!
-    button {
-        //Button design
-        background-color: rgb(249, 249, 249);
-        height: 70px;
-        min-width: 310px;
-        max-width: 315px;
-        border: none;
-        border-radius: 20px;
-        font-size: 16px;
-        margin-top: 20px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-        transition: all 0.8s;
-        //Icon
-        i {
-            position: absolute;
-            display: flex;
-            justify-content: flex-start;
-            padding-left: 30px;
-            color: grey;
-        }
-
-        //Text inside button
-        .btn_name {
-            position: relative;
-            display: flex;
-            justify-content: flex-start;
-            padding-left: 60px;
-        }
-
-        &:hover{
-            background-color: #efe1ff;
-            box-shadow: rgba(0, 0, 0,0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-            i {
-                color: $primary-color;
-            }
-        }
-    }
-
-    //Button numbers and position
-    p {
-        position: absolute;
-        height: 25px;
-        width: 25px;
-        border: none;
-        border-radius: 50px;
-        background-color: $primary-color;
-        color: white;
-        padding-left: 8px;
-        padding-top: 1px;
-        margin-top: 42.5px;
-        margin-left: -10px;
-    }
-
-}
-
-%hearts_icon {
-    #contour-heart {
-        color: $dark-grey;
-    }
-
-    #full-heart {
-        visibility: collapse;
-    }
-
-    &:hover {
-        #full-heart {
-            position: absolute;
-            visibility: visible;
-            margin-top: 3px;
-            margin-left: -16px;
-            background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shake-animation 0.3s ease-in-out 0s 1;
-            animation-fill-mode: both;
-            transform-origin: 50% 50%;
-        }
-
-        #contour-heart {
-            visibility: collapse;
-        }
-    }
-}
-
-// Project colors
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-
-//Background colors
-$light-grey: rgb(249, 249, 249);
-$medium-grey: rgb(238, 238, 238);
-$dark-grey: rgb(52, 52, 52);
-
-// Project fonts style
-$title-font: 'Shrikhand', cursive;
-$text-font: 'Roboto', sans-serif;
-
-// Project fonts size
-$small-font: 16px;
-$medium-thin-font: 17px;
-$medium-font: 24px;
-$large-font: 28px;

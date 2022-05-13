@@ -26,8 +26,7 @@
     <!--Logo-->
     <link href="image/logo/ohmyfood.png" type="text/css" rel="shortcut icon">
     <!--CSS-->
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <!--<link href="css/fontawesome.min.css" rel="stylesheet">-->
     <link href="css/menu.css" type="text/css" rel="stylesheet">
 </head>
 
@@ -43,38 +42,55 @@
 
 
     <main>
-        <!--Header-Backgroud-Photo-->
-        <img class="header_img" src="image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Bastile">
-        <!--Container_Restaurant-Menu-Order-->
-        <div class="restaurant_page">
-            <!--Restaurant Name & HeartIcon-->
-            <div class="restaurant_name">
-                <p>Bastile</p>
-                <div class="heartIcon">
-                    <i id="contour-heart" class="fa-regular fa-heart"></i>
-                    <i id="full-heart" class="fa-solid fa-heart"></i>
-                </div>
-            </div>
-            <!--Restaurant Menu-->
-            <div class="restaurant_menu">
-                <!--Restaurant Menu Section-->
-                <div class="restaurant_menu-section">
-                    <div id="card-1" class="restaurant_menu-section-name">
-                        <p>ENTREES</p>
-                    </div>
-                    <!--Restaurant Menu Items Card-->
-                    <div id="card-2" class="restaurant_menu-section-card">
-                        <i id="check" class="fa-solid fa-circle-check"></i>
-                        <div class="menu_plate-name">
-                            <p class="dish-name">Citrus Squid Carpaccio</p>
-                            <p class="dish-ingridients">With orange zest</p>
-                        </div>
-                        <div class="menu_plate-price">
-                            <p>25€</p>
-                        </div>
+        <div class="bst">
+            <!--Header-Backgroud-Photo-->
+            <img class="header_img" src="image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Bastile">
+
+            <!--Container_Restaurant-Menu-Order-->
+            <div class="restaurant_page">
+                <!--Restaurant Name & HeartIcon-->
+                <div class="restaurant_name">
+                    <p>Bastile</p>
+
+                    <!--<div class="heartIcon">
+                        <i id="contour-heart" class="fa-regular fa-heart"></i>
+                        <i id="full-heart" class="fa-solid fa-heart"></i>
+                    </div>-->
+
+
+                    <div role="button" class="heart-move" onclick="void(0)" title="addFavorite"> 
+                    <div class="heartMove_bottom"> 
+                        <i class="far fa-heart"> </i>
                     </div>
 
-                    <!--<div class=" dish section__dish section__dish--1">
+                    <div class="heartMove_top"> 
+                        <I class="fas fa-heart"> </I>
+                    </div>
+
+
+
+                    </div>
+                </div>
+                <!--Restaurant Menu-->
+                <div class="restaurant_menu">
+                    <!--Restaurant Menu Section-->
+                    <div class="restaurant_menu-section">
+                        <div id="card-1" class="restaurant_menu-section-name">
+                            <p>ENTREES</p>
+                        </div>
+                        <!--Restaurant Menu Items Card-->
+                        <div id="card-2" class="restaurant_menu-section-card">
+                            <i id="check" class="fa-solid fa-circle-check"></i>
+                            <div class="menu_plate-name">
+                                <p class="dish-name">Citrus Squid Carpaccio</p>
+                                <p class="dish-ingridients">With orange zest</p>
+                            </div>
+                            <div class="menu_plate-price">
+                                <p>25€</p>
+                            </div>
+                        </div>
+
+                        <!--<div class=" dish section__dish section__dish--1">
                         <label for="entree-1" ></label>
                         <input class="dish__select" type="checkbox" id="entree-1" name="entree" value="entree-1"/>
                         <div class="dish__name">
@@ -89,113 +105,114 @@
 
 
 
-                    <div id="card-3" class="restaurant_menu-section-card">
-                        <i id="check" class="fa-solid fa-circle-check"></i>
-                        <div class="menu_plate-name">
-                            <p class="dish-name">Gradmother's Vegetable Soup</p>
-                            <p class="dish-ingridients">Carrots, parsnips, Jerusalem artichoke</p>
+                        <div id="card-3" class="restaurant_menu-section-card">
+                            <i id="check" class="fa-solid fa-circle-check"></i>
+                            <div class="menu_plate-name">
+                                <p class="dish-name">Gradmother's Vegetable Soup</p>
+                                <p class="dish-ingridients">Carrots, parsnips, Jerusalem artichoke</p>
+                            </div>
+                            <div class="menu_plate-price">
+                                <p>35€</p>
+                            </div>
                         </div>
-                        <div class="menu_plate-price">
-                            <p>35€</p>
+
+                        <div id="card-4" class="restaurant_menu-section-card">
+                            <i id="check" class="fa-solid fa-circle-check"></i>
+                            <div class="menu_plate-name">
+                                <p class="dish-name">Onion Soup</p>
+                                <p class="dish-ingridients">Revisted</p>
+                            </div>
+                            <div class="menu_plate-price">
+                                <p>20€</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div id="card-4" class="restaurant_menu-section-card">
-                        <i id="check" class="fa-solid fa-circle-check"></i>
-                        <div class="menu_plate-name">
-                            <p class="dish-name">Onion Soup</p>
-                            <p class="dish-ingridients">Revisted</p>
+                    <!--Restaurant Menu Section-->
+                    <div class="restaurant_menu-section">
+                        <div id="card-5" class="restaurant_menu-section-name">
+                            <p>MAIN DISH</p>
                         </div>
-                        <div class="menu_plate-price">
-                            <p>20€</p>
+                        <!--Restaurant Menu Items Card-->
+                        <div id="card-6" class="restaurant_menu-section-card">
+                            <i id="check" class="fa-solid fa-circle-check"></i>
+                            <div class="menu_plate-name">
+                                <p class="dish-name">Scallops</p>
+                                <p class="dish-ingridients">With mashed parsnip</p>
+                            </div>
+                            <div class="menu_plate-price">
+                                <p>40€</p>
+                            </div>
+                        </div>
+
+                        <div id="card-7" class="restaurant_menu-section-card">
+                            <i id="check" class="fa-solid fa-circle-check"></i>
+                            <div class="menu_plate-name">
+                                <p class="dish-name">Magret de canard</p>
+                                <p class="dish-ingridients">With mashed potatoes</p>
+                            </div>
+                            <div class="menu_plate-price">
+                                <p>35€</p>
+                            </div>
+                        </div>
+
+                        <div id="card-8" class="restaurant_menu-section-card">
+                            <i id="check" class="fa-solid fa-circle-check"></i>
+                            <div class="menu_plate-name">
+                                <p class="dish-name">Game Hen</p>
+                                <p class="dish-ingridients">With vegetable gnocchis</p>
+                            </div>
+                            <div class="menu_plate-price">
+                                <p>44€</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Restaurant Menu Section-->
+                    <div class="restaurant_menu-section">
+                        <div id="card-9" class="restaurant_menu-section-name">
+                            <p>DESSERTS</p>
+                        </div>
+                        <!--Restaurant Menu Items Card-->
+                        <div id="card-10" class="restaurant_menu-section-card">
+                            <i id="check" class="fa-solid fa-circle-check"></i>
+                            <div class="menu_plate-name">
+                                <p class="dish-name">Floral Ice Cream</p>
+                                <p class="dish-ingridients">With hazelnut butter</p>
+                            </div>
+                            <div class="menu_plate-price">
+                                <p>18€</p>
+                            </div>
+                        </div>
+
+                        <div id="card-11" class="restaurant_menu-section-card">
+                            <i id="check" class="fa-solid fa-circle-check"></i>
+                            <div class="menu_plate-name">
+                                <p class="dish-name">Chocolate Lava Cake</p>
+                                <p class="dish-ingridients">Revisited</p>
+                            </div>
+                            <div class="menu_plate-price">
+                                <p>22€</p>
+                            </div>
+                        </div>
+
+                        <div id="card-12" class="restaurant_menu-section-card">
+                            <i id="check" class="fa-solid fa-circle-check"></i>
+                            <div class="menu_plate-name">
+                                <p class="dish-name">Napoleon</p>
+                                <p class="dish-ingridients">With blueberries and marzipan</p>
+                            </div>
+                            <div class="menu_plate-price">
+                                <p>23€</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!--Restaurant Menu Section-->
-                <div class="restaurant_menu-section">
-                    <div id="card-5" class="restaurant_menu-section-name">
-                        <p>MAIN DISH</p>
-                    </div>
-                    <!--Restaurant Menu Items Card-->
-                    <div id="card-6" class="restaurant_menu-section-card">
-                        <i id="check" class="fa-solid fa-circle-check"></i>
-                        <div class="menu_plate-name">
-                            <p class="dish-name">Scallops</p>
-                            <p class="dish-ingridients">With mashed parsnip</p>
-                        </div>
-                        <div class="menu_plate-price">
-                            <p>40€</p>
-                        </div>
-                    </div>
-
-                    <div id="card-7" class="restaurant_menu-section-card">
-                        <i id="check" class="fa-solid fa-circle-check"></i>
-                        <div class="menu_plate-name">
-                            <p class="dish-name">Magret de canard</p>
-                            <p class="dish-ingridients">With mashed potatoes</p>
-                        </div>
-                        <div class="menu_plate-price">
-                            <p>35€</p>
-                        </div>
-                    </div>
-
-                    <div id="card-8" class="restaurant_menu-section-card">
-                        <i id="check" class="fa-solid fa-circle-check"></i>
-                        <div class="menu_plate-name">
-                            <p class="dish-name">Game Hen</p>
-                            <p class="dish-ingridients">With vegetable gnocchis</p>
-                        </div>
-                        <div class="menu_plate-price">
-                            <p>44€</p>
-                        </div>
-                    </div>
+                <!--Order-Button-->
+                <div id="card-12" class="menu-order_button">
+                    <button>Order</button>
                 </div>
-
-                <!--Restaurant Menu Section-->
-                <div class="restaurant_menu-section">
-                    <div id="card-9" class="restaurant_menu-section-name">
-                        <p>DESSERTS</p>
-                    </div>
-                    <!--Restaurant Menu Items Card-->
-                    <div id="card-10" class="restaurant_menu-section-card">
-                        <i id="check" class="fa-solid fa-circle-check"></i>
-                        <div class="menu_plate-name">
-                            <p class="dish-name">Floral Ice Cream</p>
-                            <p class="dish-ingridients">With hazelnut butter</p>
-                        </div>
-                        <div class="menu_plate-price">
-                            <p>18€</p>
-                        </div>
-                    </div>
-
-                    <div id="card-11" class="restaurant_menu-section-card">
-                        <i id="check" class="fa-solid fa-circle-check"></i>
-                        <div class="menu_plate-name">
-                            <p class="dish-name">Chocolate Lava Cake</p>
-                            <p class="dish-ingridients">Revisited</p>
-                        </div>
-                        <div class="menu_plate-price">
-                            <p>22€</p>
-                        </div>
-                    </div>
-
-                    <div id="card-12" class="restaurant_menu-section-card">
-                        <i id="check" class="fa-solid fa-circle-check"></i>
-                        <div class="menu_plate-name">
-                            <p class="dish-name">Napoleon</p>
-                            <p class="dish-ingridients">With blueberries and marzipan</p>
-                        </div>
-                        <div class="menu_plate-price">
-                            <p>23€</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Order-Button-->
-            <div id="card-12" class="menu-order_button">
-                <button>Order</button>
             </div>
         </div>
     </main>
