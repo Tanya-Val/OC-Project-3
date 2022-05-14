@@ -227,9 +227,6 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: row; }
-    header .headerLogo img {
-      width: 80%;
-      margin: 4% 0 0 11%; }
     @media (min-width: 800px) {
       header .headerLogo img {
         width: 110%;
@@ -430,7 +427,8 @@ main .mainRestaurants {
       flex-wrap: wrap;
       padding-left: 15px;
       padding-top: 5px;
-      color: #343434; }
+      color: #343434;
+      overflow: hidden; }
       main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move {
         top: -40px;
         left: 85%; }

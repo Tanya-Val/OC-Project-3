@@ -14,7 +14,7 @@ body {
     @include desktop {
         background-image: url("../image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
         background-repeat: no-repeat;
-        background-size: 180%;
+        background-size: 195%;
         background-position: 10%;
     }
 }
@@ -32,8 +32,8 @@ body {
     @include desktop {
         background-image: url("../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
         background-repeat: no-repeat;
-        background-size: 250%;
-        background-position: 10%;
+        background-size: 195%;
+        background-position: 20%;
     }
 }
 
@@ -41,8 +41,8 @@ body {
     @include desktop {
         background-image: url("../image/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
         background-repeat: no-repeat;
-        background-size: 250%;
-        background-position: 10%;
+        background-size: 190%;
+        background-position: 20%;
     }
 }
 
@@ -52,21 +52,24 @@ header {
         @include center-flex(row);
         width: 100%;
         height: 60px;
-        padding-top: 3%;
-        padding-bottom: 2%;
-        //padding-left: 10%;
-        padding-right: 10%;
+        //padding-top: 3%;
+        //padding-bottom: 2%;
+        padding-left: 5%;
         justify-content: center;
-        column-gap: 10%;
+        
         i {
-            flex: content;
             font-size: 20px;
             text-decoration: none;
             color: $dark-grey;
+            left: 0;
+            position: absolute;
+            top: 20px;
+            padding-left: 10px;
+            
         }
         img {
-            flex-grow: 3;
-            max-width: 170px;
+            width: 110%;
+            margin: 4% 0 0 0;
         }
     }
 }
@@ -227,10 +230,7 @@ header {
                 .dish-ingridients {
                     font-weight: 100;
                     font-size: 15px;
-                    
                 }
-
-                
             }
 
             .menu_plate-price {
@@ -287,21 +287,14 @@ header {
     .restaurant_page {
         margin-left: 8%;
         width: 50%;
-        //height: 60%;
-        margin-top: -250px;
-
-        //margin-top: -30vh;
-        //margin-left: 7vh;
-
-        //position: absolute;
-        //z-index: 9;
+        margin-top: -270px;
     }
 }
 
 .menu-order_button {
     @include center-flex(column);
     padding-top: 30px;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
     animation-duration: 0.65s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
@@ -315,4 +308,62 @@ header {
 
 footer {
     @extend %footer-allpages;
+}
+
+@include desktop {
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: $dark-grey;
+        color: white;
+        padding-right: 10%;
+        padding-left: 15%;
+        padding-bottom: 5%;
+        text-decoration: none;
+
+        //Footer logo design
+        .footer-logo {
+            font-family: $title-font;
+            font-size: 24px;
+            text-decoration: none;
+            margin-top: 22px;
+            color: white;
+            transition: 0.5s;
+            &:hover {
+                color: #e4cdff;
+            }
+        }
+
+        //Footer list design with icons
+        .footer-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-grow: 2;
+            //column-gap: 1%;
+
+            //padding-top: 20px;
+            i {
+                font-size: 16px;
+                padding-right: 7px;
+            }
+            li {
+                list-style: none;
+                color: inherit;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: thick;
+                transition: 0.5s;
+                &:hover {
+                    color: #e4cdff;
+                }
+            }
+        }
+    }
 }
