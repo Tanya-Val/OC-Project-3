@@ -23,8 +23,8 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/7259398ab1.js" crossorigin="anonymous"></script>
 
-    <!--Logo-->
-    <link href="image/logo/ohmyfood.png" type="text/css" rel="shortcut icon">
+    <!--Favicon-->
+    <link href="image/logo/favicon.png" type="image/png" rel="icon" size="5x10">
     <!--CSS-->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/fontawesome.min.css" rel="stylesheet">
@@ -42,17 +42,24 @@
 
 
 
-    <main>
+    <main id="Lgrm">
         <!--Header-Backgroud-Photo-->
-        <img class="header_img" src="image/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le Gourmand">
+        <img class="header_img" src="image/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+            alt="Le Gourmand">
         <!--Container_Restaurant-Menu-Order-->
         <div class="restaurant_page">
             <!--Restaurant Name & HeartIcon-->
             <div class="restaurant_name">
                 <p>Le Gourmand</p>
-                <div class="heartIcon">
-                    <i id="contour-heart" class="fa-regular fa-heart"></i>
-                    <i id="full-heart" class="fa-solid fa-heart"></i>
+                <div role="button" class="heart-move" onclick="void(0)" title="addFavorite">
+                    <div class="heartMove_bottom">
+                        <i class="far fa-heart"> </i>
+                    </div>
+
+                    <div class="heartMove_top">
+                        <I class="fas fa-heart"> </I>
+                    </div>
+
                 </div>
             </div>
             <!--Restaurant Menu-->

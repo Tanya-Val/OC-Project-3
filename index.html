@@ -34,7 +34,7 @@
 
 <body>
     <!--Loader-->
-    <div class="loader loader--hiden" ></div>
+    <div class="loader loader--hiden"></div>
     <header class="header">
         <!--Header-Logo-->
         <div class="headerLogo">
@@ -48,7 +48,7 @@
         <div class="headerInfo">
             <p class="headerInfo-book">Book the menu you like</p>
             <p class="headerInfo-discover">Discover top-of-the-art restaurants we <br> picked for you</p>
-            <button class="headerInfo-btn">Explore our restaurants</button>
+            <a id="headerInfo-btn" href="#mainRestaurants"><button class="headerInfo-btn">Explore our restaurants</button> </a>
         </div>
     </header>
 
@@ -82,7 +82,7 @@
         </div>
 
         <!--Section_Restaurants-->
-        <div class="mainRestaurants">
+        <div class="mainRestaurants" id="mainRestaurants">
             <!--Section_Name-->
             <p class="mainRestaurants-title">Restaurants</p>
             <!--Cards_Container-->
@@ -100,11 +100,17 @@
                             <p>The Full Palette</p>
                         </div>
                         <div class="card-restaurant-place">
-                            <p>New York</p>
+                            <p>Paris</p>
                         </div>
-                        <div class="heartIcon">
-                            <i id="contour-heart" class="fa-regular fa-heart"></i>
-                            <i id="full-heart" class="fa-solid fa-heart"></i>
+                        <div role="button" class="heart-move" onclick="void(0)" title="addFavorite">
+                            <div class="heartMove_bottom">
+                                <i class="far fa-heart"> </i>
+                            </div>
+
+                            <div class="heartMove_top">
+                                <I class="fas fa-heart"> </I>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -122,11 +128,17 @@
                             <p>The Enchanted Plate</p>
                         </div>
                         <div class="card-restaurant-place">
-                            <p>New York</p>
+                            <p>Paris</p>
                         </div>
-                        <div class="heartIcon">
-                            <i id="contour-heart" class="fa-regular fa-heart"></i>
-                            <i id="full-heart" class="fa-solid fa-heart"></i>
+                        <div role="button" class="heart-move" onclick="void(0)" title="addFavorite">
+                            <div class="heartMove_bottom">
+                                <i class="far fa-heart"> </i>
+                            </div>
+
+                            <div class="heartMove_top">
+                                <I class="fas fa-heart"> </I>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -140,11 +152,17 @@
                             <p>Bastile</p>
                         </div>
                         <div class="card-restaurant-place">
-                            <p>New York</p>
+                            <p>Paris</p>
                         </div>
-                        <div class="heartIcon">
-                            <i id="contour-heart" class="fa-regular fa-heart"></i>
-                            <i id="full-heart" class="fa-solid fa-heart"></i>
+                        <div role="button" class="heart-move" onclick="void(0)" title="addFavorite">
+                            <div class="heartMove_bottom">
+                                <i class="far fa-heart"> </i>
+                            </div>
+
+                            <div class="heartMove_top">
+                                <I class="fas fa-heart"> </I>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -159,11 +177,17 @@
                             <p>Le Gourmand</p>
                         </div>
                         <div class="card-restaurant-place">
-                            <p>New York</p>
+                            <p>Paris</p>
                         </div>
-                        <div class="heartIcon">
-                            <i id="contour-heart" class="fa-regular fa-heart"></i>
-                            <i id="full-heart" class="fa-solid fa-heart"></i>
+                        <div role="button" class="heart-move" onclick="void(0)" title="addFavorite">
+                            <div class="heartMove_bottom">
+                                <i class="far fa-heart"> </i>
+                            </div>
+
+                            <div class="heartMove_top">
+                                <I class="fas fa-heart"> </I>
+                            </div>
+
                         </div>
                     </div>
                 </div>

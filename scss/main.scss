@@ -115,6 +115,14 @@ header {
             @extend %pink-button;
         }
 
+        #headerInfo-btn{
+            position: relative;
+            width: 100%;
+            @include center-flex(column);
+            text-decoration: none;
+
+        }
+
         //Media for desktop
         @include desktop {
             //Header text
@@ -137,7 +145,7 @@ main {
         font-weight: bold;
         justify-content: flex-start;
         margin-left: 20px;
-        margin-top: 40px;
+        margin-top: 20px;
         color: $dark-grey;
     }
     //How it works media query
@@ -148,21 +156,24 @@ main {
     }
     .mainInstruction-btn {
         @include center-flex(column);
+        padding-left: 7%;
+        margin-right: 4%;
 
         .mainInstruction-btn_design {
             //
             //Button and number - stick
-            padding-left: 2%;
+            //padding-left: 2%;
             button,
             p {
                 display: inline-block;
+                color: $dark-grey;
             }
 
             button {
                 //Button design
                 background-color: rgb(249, 249, 249);
                 height: 70px;
-                width: 93vw;
+                width: 90vw;
                 padding-left: 5px;
                 //max-width: 400px;
                 border: none;
@@ -177,7 +188,7 @@ main {
                     display: flex;
                     justify-content: flex-start;
                     padding-left: 30px;
-                    color: grey;
+                    color: rgb(95, 95, 95);
                 }
 
                 //Text inside button
@@ -233,9 +244,9 @@ main {
         width: 100%;
         .mainRestaurants-title {
             margin-left: 20px;
-            margin-top: 40px;
-            margin-bottom: 40px;
-            padding-top: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-top: 20px;
             font-size: $medium-font;
             font-weight: bold;
             color: $dark-grey;
@@ -309,6 +320,8 @@ main {
                     height: 30px;
                     border-radius: 5px;
                     font-weight: bold;
+                    font-size: 14px;
+                    animation: bounce 1s ease infinite;
                 }
             }
 
@@ -318,22 +331,30 @@ main {
                 flex-wrap: wrap;
                 padding-left: 15px;
                 padding-top: 5px;
+                color: $dark-grey;
 
-                .heartIcon {
-                    position: absolute;
-                    right: 5%;
-                    top: 78%;
-                    @extend %hearts_icon;
+                @extend %heart_icon;
+
+                .heart-move {
+                    top: -40px;
+                    left: 85%;
                 }
 
                 @include desktop {
-                    .heartIcon {
-                        top: 85%;
+                    .heart-move {
+                        top: -35px;
+                        left: 85%;
                     }
                 }
 
                 .card-restaurant-name {
                     font-weight: bold;
+                    font-size: $small-bold;
+                }
+
+                .card-restaurant-place {
+                    font-weight: 200;
+                    font-size: $medium-thin-font;
                 }
             }
         }
@@ -385,10 +406,10 @@ footer {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
-            align-items:center;
+            align-items: center;
             flex-grow: 2;
             //column-gap: 1%;
-            
+
             //padding-top: 20px;
             i {
                 font-size: 16px;

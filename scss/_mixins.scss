@@ -16,7 +16,7 @@
 
 //Media query
 @mixin desktop {
-    @media (min-width: 600px) {
+    @media (min-width: 800px) {
         @content;
     }
 }

@@ -61,3 +61,30 @@
         transform: translateY(0);
     }
 }
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+    }
+    0% {
+        opacity: 1;
+    }
+}
+
+//Green label
+@keyframes bounce {
+    30% { transform: scale(1.1); }
+    40%, 60% { transform: rotate(-5deg) scale(1.1); }
+    50% { transform: rotate(5deg) scale(1.1); }
+    70% { transform: rotate(0deg) scale(1.1); }
+    100% { transform: scale(1); }
+  }

@@ -10,12 +10,48 @@ body {
     line-height: 1.5;
 }
 
+#Bst {
+    @include desktop {
+        background-image: url("../image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+        background-repeat: no-repeat;
+        background-size: 180%;
+        background-position: 10%;
+    }
+}
+
+#Encp {
+    @include desktop {
+        background-image: url("../image/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+        background-repeat: no-repeat;
+        background-size: 130%;
+        background-position: 10%;
+    }
+}
+
+#Flpl {
+    @include desktop {
+        background-image: url("../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+        background-repeat: no-repeat;
+        background-size: 250%;
+        background-position: 10%;
+    }
+}
+
+#Lgrm {
+    @include desktop {
+        background-image: url("../image/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+        background-repeat: no-repeat;
+        background-size: 250%;
+        background-position: 10%;
+    }
+}
+
 header {
     //Arrow and Logo position
     .header-logoArrow {
         @include center-flex(row);
         width: 100%;
-        height: 7vh;
+        height: 60px;
         padding-top: 3%;
         padding-bottom: 2%;
         //padding-left: 10%;
@@ -32,31 +68,6 @@ header {
             flex-grow: 3;
             max-width: 170px;
         }
-    }
-
-    @include desktop {
-        .header-logoArrow {
-            i {
-                font-size: 30px;
-            }
-            img {
-                max-width: 350px;
-            }
-        }
-    }
-}
-
-//.bst{
-//    visibility: collapse;
-//}
-
-@include desktop {
-    .bst {
-        //visibility: visible;
-        background-image: url("/image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-        background-repeat: no-repeat;
-        background-size: 200%;
-        background-position: 20%;
     }
 }
 
@@ -91,6 +102,7 @@ header {
         align-items: center;
         padding-left: 5%;
         padding-top: 5%;
+        padding-right: 5%;
 
         p {
             flex: 3;
@@ -98,58 +110,7 @@ header {
             font-size: $large-font;
         }
 
-        //.heartIcon {
-        /*flex: 1;
-            font-size: 20px;
-            font-weight: 100;
-            @extend %hearts_icon;*/
-
-        .heart-move {
-            border: none;
-            background-color: inherit;
-            position: relative;
-            font-size: 1.5rem;
-            height: fit-content;
-
-            &_bottom {
-                opacity: 1;
-                transition: opacity 1s;
-            }
-
-            &:focus,
-            &:hover,
-            &:active {
-                & .heartMove_bottom {
-                    opacity: 0;
-                }
-
-                & .heartMove_top {
-                    opacity: 1;
-                }
-            }
-
-            &_top {
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                opacity: 0;
-                transition: opacity 2s;
-            }
-
-            .far {
-                display: block;
-            }
-
-            .fas {
-                display: block;
-                background: -webkit-linear-gradient(#9356dc, #ff79da);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-        }
-        //}
+        @extend %heart_icon;
     }
 
     .restaurant_menu {
@@ -253,9 +214,10 @@ header {
             .menu_plate-name {
                 padding: 10px 0 10px 0;
                 margin-left: 15px;
+                //DOTS OVERFLOW
                 text-overflow: ellipsis;
-                overflow: hidden;
                 white-space: nowrap;
+                overflow: hidden;
                 grid-area: 1 / 1 / 3 / 2;
                 position: relative;
 
@@ -265,7 +227,10 @@ header {
                 .dish-ingridients {
                     font-weight: 100;
                     font-size: 15px;
+                    
                 }
+
+                
             }
 
             .menu_plate-price {
@@ -320,8 +285,11 @@ header {
 
 @include desktop {
     .restaurant_page {
-        margin-left: 10%;
+        margin-left: 8%;
         width: 50%;
+        //height: 60%;
+        margin-top: -250px;
+
         //margin-top: -30vh;
         //margin-left: 7vh;
 
@@ -348,5 +316,3 @@ header {
 footer {
     @extend %footer-allpages;
 }
-
-//-------------------------------------
