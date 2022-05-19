@@ -1,83 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
-
-header .headerInfo .headerInfo-btn {
-  height: 50px;
-  width: 60%;
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-  color: white;
-  opacity: 1;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  background: #9356dc;
-  background: linear-gradient(6deg, #9356dc 0%, #c767db 57%, #ff79da 100%);
-  transition: all 0.5s; }
-  header .headerInfo .headerInfo-btn:hover {
-    opacity: 0.85;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
-
-main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move {
-  border: none;
-  background-color: inherit;
-  position: relative;
-  font-size: 1.5rem;
-  height: fit-content; }
-  main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move .heartMove_top {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    animation: fade-in 0.2s forwards; }
-  main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move:focus .heartMove_bottom, main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move:hover .heartMove_bottom, main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move:active .heartMove_bottom {
-    visibility: collapse; }
-  main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move:focus .heartMove_top, main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move:hover .heartMove_top, main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move:active .heartMove_top {
-    display: initial; }
-  main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move .far {
-    display: block;
-    color: #343434; }
-  main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move .fas {
-    display: block;
-    background: -webkit-linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shake-animation 0.3s ease-in-out 0s 1;
-    animation-fill-mode: both;
-    transform-origin: 50% 50%; }
-
-/*%hearts_icon {
-    #contour-heart {
-        color: $dark-grey;
-    }
-
-    #full-heart {
-        visibility: collapse;
-    }
-
-    &:hover {
-        #full-heart {
-            position: absolute;
-            visibility: visible;
-            margin-top: 3px;
-            margin-left: -16px;
-            background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shake-animation 0.3s ease-in-out 0s 1;
-            animation-fill-mode: both;
-            transform-origin: 50% 50%;
-        }
-
-        #contour-heart {
-            visibility: collapse;
-        }
-    }
-}*/
 @keyframes shake-animation {
   0% {
     transform: translateX(0); }
@@ -147,6 +67,95 @@ main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .he
     transform: rotate(0deg) scale(1.1); }
   100% {
     transform: scale(1); } }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5; }
+
+footer {
+  background-color: #343434;
+  color: white;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  text-decoration: none; }
+  footer .footer-logo {
+    font-family: "Shrikhand", cursive;
+    font-size: 20px;
+    text-decoration: none;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s; }
+    footer .footer-logo:hover {
+      color: #e4cdff; }
+  footer .footer-list {
+    padding-top: 20px; }
+    footer .footer-list i {
+      font-size: 12px;
+      padding-right: 7px; }
+    footer .footer-list li {
+      list-style: none;
+      color: inherit; }
+    footer .footer-list a {
+      color: inherit;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: thick;
+      transition: 0.5s; }
+      footer .footer-list a:hover {
+        color: #e4cdff; }
+
+header .headerInfo .headerInfo-btn {
+  height: 50px;
+  width: 60%;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  color: white;
+  opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  background: #9356dc;
+  background: linear-gradient(6deg, #9356dc 0%, #c767db 57%, #ff79da 100%);
+  transition: all 0.5s; }
+  header .headerInfo .headerInfo-btn:hover {
+    opacity: 0.85;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
+
+main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move {
+  border: none;
+  background-color: inherit;
+  position: relative;
+  font-size: 1.5rem;
+  height: fit-content; }
+  main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move .heartMove_top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    animation: fade-in 0.2s forwards; }
+  main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move:focus .heartMove_bottom, main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move:hover .heartMove_bottom, main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move:active .heartMove_bottom {
+    visibility: collapse; }
+  main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move:focus .heartMove_top, main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move:hover .heartMove_top, main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move:active .heartMove_top {
+    display: initial; }
+  main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move .far {
+    display: block;
+    color: #343434; }
+  main .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt .heart-move .fas {
+    display: block;
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shake-animation 0.3s ease-in-out 0s 1;
+    animation-fill-mode: both;
+    transform-origin: 50% 50%; }
 
 footer {
   background-color: #343434;

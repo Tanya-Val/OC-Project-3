@@ -1,0 +1,22 @@
+//Center the elements for mobile
+@mixin center-flex($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+//Center the elements for mobile
+@mixin start-flex($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: $direction;
+}
+
+//Media query
+@mixin desktop {
+    @media (min-width: 800px) {
+        @content;
+    }
+}

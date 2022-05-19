@@ -1,83 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
-
-.menu-order_button button {
-  height: 50px;
-  width: 60%;
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-  color: white;
-  opacity: 1;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  background: #9356dc;
-  background: linear-gradient(6deg, #9356dc 0%, #c767db 57%, #ff79da 100%);
-  transition: all 0.5s; }
-  .menu-order_button button:hover {
-    opacity: 0.85;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
-
-.restaurant_page .restaurant_name .heart-move {
-  border: none;
-  background-color: inherit;
-  position: relative;
-  font-size: 1.5rem;
-  height: fit-content; }
-  .restaurant_page .restaurant_name .heart-move .heartMove_top {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    animation: fade-in 0.2s forwards; }
-  .restaurant_page .restaurant_name .heart-move:focus .heartMove_bottom, .restaurant_page .restaurant_name .heart-move:hover .heartMove_bottom, .restaurant_page .restaurant_name .heart-move:active .heartMove_bottom {
-    visibility: collapse; }
-  .restaurant_page .restaurant_name .heart-move:focus .heartMove_top, .restaurant_page .restaurant_name .heart-move:hover .heartMove_top, .restaurant_page .restaurant_name .heart-move:active .heartMove_top {
-    display: initial; }
-  .restaurant_page .restaurant_name .heart-move .far {
-    display: block;
-    color: #343434; }
-  .restaurant_page .restaurant_name .heart-move .fas {
-    display: block;
-    background: -webkit-linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shake-animation 0.3s ease-in-out 0s 1;
-    animation-fill-mode: both;
-    transform-origin: 50% 50%; }
-
-/*%hearts_icon {
-    #contour-heart {
-        color: $dark-grey;
-    }
-
-    #full-heart {
-        visibility: collapse;
-    }
-
-    &:hover {
-        #full-heart {
-            position: absolute;
-            visibility: visible;
-            margin-top: 3px;
-            margin-left: -16px;
-            background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shake-animation 0.3s ease-in-out 0s 1;
-            animation-fill-mode: both;
-            transform-origin: 50% 50%;
-        }
-
-        #contour-heart {
-            visibility: collapse;
-        }
-    }
-}*/
 @keyframes shake-animation {
   0% {
     transform: translateX(0); }
@@ -148,6 +68,15 @@
   100% {
     transform: scale(1); } }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5; }
+
 footer {
   background-color: #343434;
   color: white;
@@ -181,9 +110,52 @@ footer {
       footer .footer-list a:hover {
         color: #e4cdff; }
 
-body {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.5; }
+.menu-order_button button {
+  height: 50px;
+  width: 60%;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  color: white;
+  opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  background: #9356dc;
+  background: linear-gradient(6deg, #9356dc 0%, #c767db 57%, #ff79da 100%);
+  transition: all 0.5s; }
+  .menu-order_button button:hover {
+    opacity: 0.85;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
+
+.restaurant_page .restaurant_name .heart-move {
+  border: none;
+  background-color: inherit;
+  position: relative;
+  font-size: 1.5rem;
+  height: fit-content; }
+  .restaurant_page .restaurant_name .heart-move .heartMove_top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    animation: fade-in 0.2s forwards; }
+  .restaurant_page .restaurant_name .heart-move:focus .heartMove_bottom, .restaurant_page .restaurant_name .heart-move:hover .heartMove_bottom, .restaurant_page .restaurant_name .heart-move:active .heartMove_bottom {
+    visibility: collapse; }
+  .restaurant_page .restaurant_name .heart-move:focus .heartMove_top, .restaurant_page .restaurant_name .heart-move:hover .heartMove_top, .restaurant_page .restaurant_name .heart-move:active .heartMove_top {
+    display: initial; }
+  .restaurant_page .restaurant_name .heart-move .far {
+    display: block;
+    color: #343434; }
+  .restaurant_page .restaurant_name .heart-move .fas {
+    display: block;
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shake-animation 0.3s ease-in-out 0s 1;
+    animation-fill-mode: both;
+    transform-origin: 50% 50%; }
 
 @media (min-width: 800px) {
   #Bst {
@@ -223,7 +195,7 @@ header .header-logoArrow {
   padding-left: 5%;
   justify-content: center; }
   header .header-logoArrow i {
-    font-size: 20px;
+    font-size: 30px;
     text-decoration: none;
     color: #343434;
     left: 0;
@@ -346,16 +318,18 @@ header .header-logoArrow {
       .restaurant_page .restaurant_menu .restaurant_menu-section-card .menu_plate-name {
         padding: 10px 0 10px 0;
         margin-left: 15px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
         grid-area: 1 / 1 / 3 / 2;
-        position: relative; }
+        position: relative;
+        overflow: hidden; }
         .restaurant_page .restaurant_menu .restaurant_menu-section-card .menu_plate-name .dish-name {
           font-weight: 400; }
         .restaurant_page .restaurant_menu .restaurant_menu-section-card .menu_plate-name .dish-ingridients {
           font-weight: 100;
-          font-size: 15px; }
+          font-size: 15px;
+          width: 200px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
       .restaurant_page .restaurant_menu .restaurant_menu-section-card .menu_plate-price {
         position: relative;
         grid-area: 1 / 2 / 3 / 3; }
