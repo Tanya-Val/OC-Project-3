@@ -326,7 +326,7 @@ header .header-logoArrow {
         .restaurant_page .restaurant_menu .restaurant_menu-section-card .menu_plate-name .dish-ingridients {
           font-weight: 100;
           font-size: 15px;
-          width: 200px;
+          width: 85%;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis; }
