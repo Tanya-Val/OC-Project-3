@@ -292,15 +292,18 @@ header .header-logoArrow {
       .restaurant_page .restaurant_menu .restaurant_menu-section-card i {
         position: absolute;
         z-index: 3;
-        right: 0%;
+        right: 0.5%;
         color: white;
         animation-duration: 0.4s;
         animation-iteration-count: 1;
         animation-timing-function: ease-in;
         animation-fill-mode: forwards;
         opacity: 0; }
+      @media (min-width: 800px) {
+        .restaurant_page .restaurant_menu .restaurant_menu-section-card i {
+          right: 4%; } }
       .restaurant_page .restaurant_menu .restaurant_menu-section-card:hover {
-        padding-right: 12%; }
+        padding-right: 15%; }
       .restaurant_page .restaurant_menu .restaurant_menu-section-card:hover i {
         animation-name: transform;
         opacity: 1; }
@@ -312,7 +315,8 @@ header .header-logoArrow {
         height: 65px;
         background: #99E2D0;
         transition: 0.5s;
-        z-index: 2; }
+        z-index: 2;
+        margin-left: 10px; }
       .restaurant_page .restaurant_menu .restaurant_menu-section-card:hover::before {
         left: 80%; }
       .restaurant_page .restaurant_menu .restaurant_menu-section-card .menu_plate-name {
