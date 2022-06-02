@@ -1,0 +1,139 @@
+
+/*Header Main Page*/
+.headerMain {
+    //Header container & position
+    @include center-flex(column);
+
+    //Header-Logo container & position
+    .headerLogo {
+        width: 100%;
+        height: 60px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 0 4px 0px;
+        z-index: 1;
+        @include center-flex(row);
+        
+
+        @include desktop {
+            img {
+                width: 110%;
+                margin: 4% 0 0 0;
+            }
+        }
+    }
+
+    //Header-Pin and Location container & position
+    .header-pin {
+        width: 100%;
+        height: 60px;
+        background-color: $medium-grey;
+        color: $dark-grey;
+        @include center-flex(row);
+        p {
+            margin-left: 20px;
+            font-size: $small-font;
+        }
+
+        @include desktop {
+            p {
+                font-size: $medium-font;
+            }
+        }
+
+        i,
+        p {
+            display: inline-block;
+            background-color: $medium-grey;
+        }
+    }
+
+    //Header-Info container & position
+    .headerInfo {
+        @include center-flex(column);
+        row-gap: 35px;
+        width: 100%;
+        height: 300px;
+        background-color: $light-grey;
+        color: $dark-grey;
+
+        //Header text
+        .headerInfo-book {
+            font-size: $medium-font;
+            font-weight: bold;
+        }
+
+        .headerInfo-discover {
+            text-align: center;
+            font-size: $medium-thin-font;
+            font-weight: 200;
+        }
+
+        //Pink button position
+        .headerInfo-btn {
+            @extend %pink-button;
+        }
+
+        #headerInfo-btn{
+            position: relative;
+            width: 100%;
+            @include center-flex(column);
+            text-decoration: none;
+
+        }
+
+        //Media for desktop
+        @include desktop {
+            //Header text
+            .headerInfo-book {
+                font-size: 40px;
+            }
+            .headerInfo-discover {
+                font-size: 25px;
+            }
+
+            row-gap: 16px;
+        }
+    }
+}
+
+/*___________________________________________*/
+/* Header Menu page*/
+
+.headerMenu {
+    //Arrow and Logo position
+    .header-logoArrow {
+        @include center-flex(row);
+        width: 100%;
+        height: 60px;
+        padding-left: 5%;
+        justify-content: center;
+
+        i {
+            font-size: 30px;
+            text-decoration: none;
+            color: $dark-grey;
+            left: 0;
+            position: absolute;
+            top: 20px;
+            padding-left: 10px;
+        }
+        img {
+            width: 110%;
+            margin: 4% 0 0 0;
+        }
+    }
+}
+
+//Background position
+.header_img {
+    visibility: visible;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+@include desktop {
+    .header_img {
+        visibility: collapse;
+    }
+}

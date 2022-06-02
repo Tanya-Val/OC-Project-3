@@ -8,13 +8,14 @@
     color: white;
     opacity: 1;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    background: rgb(147, 86, 220);
     background: linear-gradient(
         6deg,
         rgba(147, 86, 220, 1) 0%,
         rgba(199, 103, 219, 1) 57%,
         rgba(255, 121, 218, 1) 100%
     );
+
+    //Opacity and shadow transition for hover
     transition: all 0.5s;
     &:hover{
         opacity: 0.85;
@@ -22,53 +23,5 @@
     }
 }
 
-%heart_icon{
-    .heart-move {
-        border: none;
-        background-color: inherit;
-        position: relative;
-        font-size: 1.5rem;
-        height: fit-content;
 
-        .heartMove_top {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            display: none;
-            animation: fade-in 0.2s forwards;
-            
-        }
-
-        &:focus,
-        &:hover,
-        &:active {
-            & .heartMove_bottom {
-                visibility: collapse;
-                
-            }
-
-            & .heartMove_top {
-                display: initial;
-            }
-        }
-
-        .far {
-            display: block;
-            color: $dark-grey;
-        }
-
-        .fas {
-            display: block;
-            background: -webkit-linear-gradient(#9356dc, #ff79da);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shake-animation 0.3s ease-in-out 0s 1;
-            animation-fill-mode: both;
-            transform-origin: 50% 50%;
-        }
-    }
-}
 

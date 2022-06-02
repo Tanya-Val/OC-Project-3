@@ -1,0 +1,85 @@
+
+/*Main page -> Grey button (how it works)*/
+.mainInstruction-btn {
+    @include center-flex(column);
+    padding-left: 7%;
+    margin-right: 4%;
+
+    .mainInstruction-btn_design {
+        
+        button,
+        p {
+            display: inline-block;
+            color: $dark-grey;
+        }
+
+        button {
+            //Button design
+            background-color: rgb(249, 249, 249);
+            height: 70px;
+            width: 90vw;
+            padding-left: 5px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            transition: all 0.8s;
+            //Icon
+            i {
+                position: absolute;
+                display: flex;
+                justify-content: flex-start;
+                padding-left: 30px;
+                color: rgb(95, 95, 95);
+            }
+
+            //Text inside button
+            .btn_name {
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                padding-left: 60px;
+            }
+
+            &:hover {
+                background-color: #efe1ff;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                i {
+                    color: #9356dc;
+                }
+            }
+        }
+
+        //Button numbers and position
+        p {
+            position: absolute;
+            height: 25px;
+            width: 25px;
+            border: none;
+            border-radius: 50px;
+            background-color: $primary-color;
+            color: white;
+            padding-left: 8px;
+            padding-top: 1px;
+            margin-top: 42.5px;
+            margin-left: -10px;
+        }
+    }
+}
+
+//Grey buttons media query
+@include desktop {
+    .mainInstruction-btn {
+        @include center-flex(row);
+        column-gap: 3%;
+
+        .mainInstruction-btn_design {
+            padding-left: 0;
+
+            button {
+                width: 27vw;
+            }
+        }
+    }
+}

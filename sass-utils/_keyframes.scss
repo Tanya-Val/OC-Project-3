@@ -1,3 +1,4 @@
+/*Heart shaking*/
 @keyframes shake-animation {
     0% {
         transform: translateX(0);
@@ -15,7 +16,7 @@
         transform: translateX(0);
     }
 }
-//Green price animation
+/*Checkmark ikon rotation on green price*/
 @keyframes transform {
     100% {
         transform: translateX(-140%) rotate(360deg);
@@ -42,7 +43,8 @@
         transform: rotate(1turn);
     }
 }
-//Dish fall
+
+/*Dish fall*/
 @keyframes dish {
     0% {
         opacity: 0;
@@ -62,29 +64,12 @@
     }
 }
 
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
-@keyframes fade-out {
-    100% {
-        opacity: 0;
-    }
-    0% {
-        opacity: 1;
-    }
-}
-
-//Green label
+/*Green label on restaurant card for main page*/
 @keyframes bounce {
     30% { transform: scale(1.1); }
-    40%, 60% { transform: rotate(-5deg) scale(1.1); }
-    50% { transform: rotate(5deg) scale(1.1); }
+    40%, 60% { transform: rotate(-2deg) scale(1.1); }
+    50% { transform: rotate(2deg) scale(1.1); }
     70% { transform: rotate(0deg) scale(1.1); }
     100% { transform: scale(1); }
   }

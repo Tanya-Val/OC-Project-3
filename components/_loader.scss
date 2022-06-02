@@ -1,0 +1,27 @@
+.loader {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    z-index: 4;
+    opacity: 0.9;
+    /*Animation to hide the loader class
+    with 0s durantion and 2s delay*/
+    animation: loader-hide 0s 2s;
+    animation-fill-mode: forwards;
+
+    /*Loader element*/
+    &::after {
+        content: "";
+        width: 150px;
+        height: 150px;
+        border: 15px solid #dddddd00;
+        border-radius: 50%;
+        border-top-color: $primary-color;
+        border-bottom-color: $primary-color;
+        animation: loading linear 1s infinite;
+    }
+}
