@@ -1,0 +1,16 @@
+// Project fonts style
+$title-font: 'Shrikhand', cursive;
+$text-font: 'Roboto', sans-serif;
+
+// Project fonts size
+$small-font: 16px;
+$medium-thin-font: 17px;
+$small-bold: 18px;
+$medium-font: 24px;
+$large-font: 28px;
+
+
+body {
+    font-family: $text-font;
+    line-height: 1.5;
+}
