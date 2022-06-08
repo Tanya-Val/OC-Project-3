@@ -1,16 +1,14 @@
 /*Main page - Restaurant section wirh card design*/
-
 .mainRestaurants {
     background: $light-grey;
     width: 100%;
+
     .mainRestaurants-title {
-        margin-left: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 20px 0 20px 20px ;
         padding-top: 20px;
+        color: $dark-grey;
         font-size: $medium-font;
         font-weight: bold;
-        color: $dark-grey;
     }
 
     //"Restautrants" media query
@@ -20,19 +18,21 @@
         }
     }
 
+    //Restaurant card design and position 
     .mainRestaurants_card {
         @include center-flex(column);
 
         .mainRestaurants_card-design {
-            margin-bottom: 20px;
-            border-radius: 15px;
             height: 220px;
             width: 90%;
+            margin-bottom: 20px;
+            border-radius: 15px;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             position: relative;
             transition: 0.5s;
         }
 
+        //Media query for card design 
         @include desktop {
             .mainRestaurants_card-design {
                 width: 40%;
@@ -40,6 +40,7 @@
             }
         }
 
+        //Hover effect on shadow 
         .mainRestaurants_card-design:hover {
             box-shadow: 0 8px 16px 0 rgba(99, 99, 99, 0.4);
         }
@@ -53,56 +54,61 @@
         }
 
         img {
+            top: 0;
+            left: 0;
             height: 150px;
             width: 100%;
             object-fit: cover;
             position: relative;
             border-radius: 15px 15px 0 0;
-            top: 0;
-            left: 0;
         }
 
+        //Media query for card design image
         @include desktop {
             img {
                 height: 280px;
             }
         }
 
+        //Green label "New" with animation on the restaurant card
         .card-label {
-            position: absolute;
-            z-index: 3;
             top: 5%;
             left: 70%;
+            position: absolute;
+            z-index: 3;
+
+            //Green label design
             button {
-                background-color: $tertiary-color;
-                color: darken($color: $tertiary-color, $amount: 50);
-                border: none;
                 width: 80px;
                 height: 30px;
+                border: none;
                 border-radius: 5px;
+                background-color: $tertiary-color;
                 font-weight: bold;
                 font-size: 14px;
+                color: darken($color: $tertiary-color, $amount: 50);
                 animation: bounce 1s ease infinite;
             }
         }
 
         .mainRestaurants_card-design-txt {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
+            @include flex(column);
             padding-left: 15px;
             padding-top: 5px;
             color: $dark-grey;
             overflow: hidden;
 
+            //Heart Icon extend 
             @extend %heart_icon;
 
+            //Heart Icon position on the card
             .heart-move {
                 top: -40px;
                 left: 85%;
                 
             }
 
+            //Media query for heart icon position on the card 
             @include desktop {
                 .heart-move {
                     top: -35px;
@@ -110,6 +116,7 @@
                 }
             }
 
+            //Restaurant card text 
             .card-restaurant-name {
                 font-weight: bold;
                 font-size: $small-bold;
@@ -122,11 +129,10 @@
         }
     }
 
+    //Media query for  restaurant cart
     @include desktop {
         .mainRestaurants_card {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            @include flex(row);
             column-gap: 3%;
             padding: 0 4.8% 0 4.8%;
         }

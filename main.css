@@ -298,13 +298,14 @@ body {
   opacity: 0;
   animation-name: dish; }
 
+/*Main page loader*/
 .loader {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
   background: white;
   z-index: 4;
   opacity: 0.9;
@@ -439,13 +440,11 @@ body {
   background: #f9f9f9;
   width: 100%; }
   .mainRestaurants .mainRestaurants-title {
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0 20px 20px;
     padding-top: 20px;
+    color: #343434;
     font-size: 24px;
-    font-weight: bold;
-    color: #343434; }
+    font-weight: bold; }
   @media (min-width: 800px) {
     .mainRestaurants .mainRestaurants-title {
       margin-left: 45%; } }
@@ -455,10 +454,10 @@ body {
     align-items: center;
     flex-direction: column; }
     .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design {
-      margin-bottom: 20px;
-      border-radius: 15px;
       height: 220px;
       width: 90%;
+      margin-bottom: 20px;
+      border-radius: 15px;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       position: relative;
       transition: 0.5s; }
@@ -473,35 +472,35 @@ body {
     .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design a:visited {
       text-decoration: none; }
     .mainRestaurants .mainRestaurants_card img {
+      top: 0;
+      left: 0;
       height: 150px;
       width: 100%;
       object-fit: cover;
       position: relative;
-      border-radius: 15px 15px 0 0;
-      top: 0;
-      left: 0; }
+      border-radius: 15px 15px 0 0; }
     @media (min-width: 800px) {
       .mainRestaurants .mainRestaurants_card img {
         height: 280px; } }
     .mainRestaurants .mainRestaurants_card .card-label {
-      position: absolute;
-      z-index: 3;
       top: 5%;
-      left: 70%; }
+      left: 70%;
+      position: absolute;
+      z-index: 3; }
       .mainRestaurants .mainRestaurants_card .card-label button {
-        background-color: #99E2D0;
-        color: #1b6150;
-        border: none;
         width: 80px;
         height: 30px;
+        border: none;
         border-radius: 5px;
+        background-color: #99E2D0;
         font-weight: bold;
         font-size: 14px;
+        color: #1b6150;
         animation: bounce 1s ease infinite; }
     .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design-txt {
       display: flex;
-      flex-direction: column;
       flex-wrap: wrap;
+      flex-direction: column;
       padding-left: 15px;
       padding-top: 5px;
       color: #343434;
@@ -522,8 +521,8 @@ body {
   @media (min-width: 800px) {
     .mainRestaurants .mainRestaurants_card {
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
+      flex-direction: row;
       column-gap: 3%;
       padding: 0 4.8% 0 4.8%; } }
 
@@ -635,14 +634,11 @@ body {
 footer {
   background-color: #343434;
   color: white;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0 20px 20px;
   text-decoration: none; }
   footer .footer-logo {
     font-family: "Shrikhand", cursive;
     font-size: 20px;
-    text-decoration: none;
     text-decoration: none;
     color: white;
     transition: 0.5s; }
@@ -673,9 +669,7 @@ footer {
     align-items: center;
     background-color: #343434;
     color: white;
-    padding-right: 10%;
-    padding-left: 15%;
-    padding-bottom: 5%;
+    padding: 0 10% 5% 15%;
     text-decoration: none; }
     footer .footer-logo {
       font-family: "Shrikhand", cursive;

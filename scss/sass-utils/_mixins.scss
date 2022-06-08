@@ -1,4 +1,11 @@
-//Center the elements for mobile
+//Flex
+@mixin flex($direction) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+}
+
+//Center flex
 @mixin center-flex($direction) {
     display: flex;
     justify-content: center;
@@ -6,7 +13,7 @@
     flex-direction: $direction;
 }
 
-//Center the elements for mobile
+//Start flex
 @mixin start-flex($direction) {
     display: flex;
     justify-content: center;

@@ -3,16 +3,13 @@ footer {
     //Footer design
     background-color: $dark-grey;
     color: white;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0 20px 20px;
     text-decoration: none;
 
     //Footer logo design
     .footer-logo {
         font-family: $title-font;
         font-size: 20px;
-        text-decoration: none;
         text-decoration: none;
         color: white;
         transition: 0.5s;
@@ -54,9 +51,7 @@ footer {
         align-items: center;
         background-color: $dark-grey;
         color: white;
-        padding-right: 10%;
-        padding-left: 15%;
-        padding-bottom: 5%;
+        padding: 0 10% 5% 15%;
         text-decoration: none;
 
         //Footer logo design

@@ -1,0 +1,27 @@
+// PINK button - extend
+%pink-button {
+    height: 50px;
+    width: 60%;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    color: white;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    background: linear-gradient(
+        6deg,
+        rgba(147, 86, 220, 1) 0%,
+        rgba(199, 103, 219, 1) 57%,
+        rgba(255, 121, 218, 1) 100%
+    );
+
+    // Opacity and shadow transition for hover
+    transition: all 0.5s;
+    &:hover{
+        opacity: 0.85;
+        box-shadow: rgba(0, 0, 0,0.4) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    }
+}
+
+
+
