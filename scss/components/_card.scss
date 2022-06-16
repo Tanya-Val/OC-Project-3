@@ -23,7 +23,7 @@
         @include center-flex(column);
 
         .mainRestaurants_card-design {
-            height: 220px;
+            height: 250px;
             width: 90%;
             margin-bottom: 20px;
             border-radius: 15px;
@@ -56,11 +56,20 @@
         img {
             top: 0;
             left: 0;
-            height: 150px;
+            height: 175px;
             width: 100%;
+            object-position: 30% 95%;
             object-fit: cover;
             position: relative;
             border-radius: 15px 15px 0 0;
+        }
+
+        #img_fullPalette{
+            object-position: 45% 97%;
+        }
+
+        #img_enchantedPlate {
+            object-position: 30% 61%;
         }
 
         //Media query for card design image
@@ -78,7 +87,8 @@
             z-index: 3;
 
             //Green label design
-            button {
+            p {
+                @include center-flex(row);
                 width: 80px;
                 height: 30px;
                 border: none;

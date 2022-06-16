@@ -454,7 +454,7 @@ body {
     align-items: center;
     flex-direction: column; }
     .mainRestaurants .mainRestaurants_card .mainRestaurants_card-design {
-      height: 220px;
+      height: 250px;
       width: 90%;
       margin-bottom: 20px;
       border-radius: 15px;
@@ -474,11 +474,16 @@ body {
     .mainRestaurants .mainRestaurants_card img {
       top: 0;
       left: 0;
-      height: 150px;
+      height: 175px;
       width: 100%;
+      object-position: 30% 95%;
       object-fit: cover;
       position: relative;
       border-radius: 15px 15px 0 0; }
+    .mainRestaurants .mainRestaurants_card #img_fullPalette {
+      object-position: 45% 97%; }
+    .mainRestaurants .mainRestaurants_card #img_enchantedPlate {
+      object-position: 30% 61%; }
     @media (min-width: 800px) {
       .mainRestaurants .mainRestaurants_card img {
         height: 280px; } }
@@ -487,7 +492,11 @@ body {
       left: 70%;
       position: absolute;
       z-index: 3; }
-      .mainRestaurants .mainRestaurants_card .card-label button {
+      .mainRestaurants .mainRestaurants_card .card-label p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
         width: 80px;
         height: 30px;
         border: none;
@@ -583,7 +592,7 @@ body {
       font-weight: 200; }
     .headerMain .headerInfo #headerInfo-btn {
       position: relative;
-      width: 100%;
+      width: 70%;
       display: flex;
       justify-content: center;
       align-items: center;
