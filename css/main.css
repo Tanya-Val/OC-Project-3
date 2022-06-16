@@ -237,7 +237,8 @@ body {
         position: relative;
         overflow: hidden; }
         .restaurant_page .restaurant_menu .restaurant_menu-section-card .menu_plate-name .dish-name {
-          font-weight: 400; }
+          font-weight: 400;
+          width: 85%; }
         .restaurant_page .restaurant_menu .restaurant_menu-section-card .menu_plate-name .dish-ingridients {
           font-weight: 100;
           font-size: 15px;
