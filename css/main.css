@@ -665,7 +665,6 @@ footer {
       color: inherit;
       text-decoration: none;
       font-size: 14px;
-      font-weight: thick;
       transition: 0.5s; }
       footer .footer-list a:hover {
         color: #e4cdff; }
@@ -705,7 +704,6 @@ footer {
         color: inherit;
         text-decoration: none;
         font-size: 18px;
-        font-weight: thick;
         transition: 0.5s; }
         footer .footer-list a:hover {
           color: #e4cdff; } }
